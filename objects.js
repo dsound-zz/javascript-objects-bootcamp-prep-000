@@ -1,9 +1,10 @@
-var playlist = {Drake: 'Six God', BlindBoyFuller: 'Shake that Shimmy'}
-function updatePlaylist(obj, key, value) {
-  obj[key] = value;
-  return obj 
+var playlist = {TheBeatles: "Eleanor Rigby", TheWho: "My Generation", Drake: "Six God"};
+
+function updatePlaylist(obj, name, song) {
+  return Object.assign(playlist, {[name]: song})
 }
-function removeFromPlaylist(obj, key) {
-  delete obj[key];
-  return obj 
+
+function removeFromPlaylist(playlist, artistName) {
+ delete playlist[artistName]
+  return playlist 
 }
